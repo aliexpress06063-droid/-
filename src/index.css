@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom scrollbar for both themes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark mode comprehensive styling */
+.dark {
+  color-scheme: dark;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.dark body {
+  background-color: #0b0f19 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Automatic card, container & header dark mode adaptors */
+.dark .bg-white {
+  background-color: #1e293b !important;
+  color: #f8fafc;
+}
+
+.dark .bg-white\/90 {
+  background-color: rgba(30, 41, 59, 0.92) !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0b0f19 !important;
+}
+
+.dark .bg-slate-50\/50,
+.dark .bg-slate-50\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #243147 !important;
+}
+
+.dark .bg-slate-100\/80 {
+  background-color: rgba(36, 49, 71, 0.8) !important;
+}
+
+.dark .border-slate-200,
+.dark .border-slate-200\/80,
+.dark .border-slate-200\/60,
+.dark .border-slate-100 {
+  border-color: #334155 !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Dark mode adjustments for light badges */
+.dark .bg-emerald-50 {
+  background-color: rgba(6, 78, 59, 0.3) !important;
+  color: #34d399 !important;
+  border-color: rgba(5, 150, 105, 0.4) !important;
+}
+
+.dark .bg-indigo-50 {
+  background-color: rgba(49, 46, 129, 0.3) !important;
+  color: #818cf8 !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: rgba(120, 53, 15, 0.3) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(217, 119, 6, 0.4) !important;
+}
+
+.dark .bg-rose-50 {
+  background-color: rgba(136, 19, 55, 0.3) !important;
+  color: #fb7185 !important;
+  border-color: rgba(225, 29, 72, 0.4) !important;
+}
+

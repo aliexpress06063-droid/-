@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متابع المذاكرة | Study Tracker</title>
+    <meta name="description" content="نظام شخصي متكامل ومستمر لمتابعة المذاكرة، الجداول المخصصة، المؤقت الذكي، والتقويم السنوي مع دعم تعدد المستخدمين." />
+    <meta property="og:title" content="متابع المذاكرة | Study Tracker" />
+    <meta property="og:description" content="نظام شخصي متكامل ومستمر لمتابعة المذاكرة، الجداول المخصصة، المؤقت الذكي، والتقويم السنوي مع دعم تعدد المستخدمين." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Script to prevent flash of wrong theme and adopt dark mode by default -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('study_tracker_theme');
+          if (saved === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-emerald-500 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

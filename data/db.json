@@ -1,0 +1,18 @@
+{
+  "users": {},
+  "schedules": {},
+  "dayLogs": {},
+  "settings": {},
+  "tokens": {},
+  "simulatedEmails": [],
+  "securityLogs": [
+    {
+      "id": "1472d4d3-99b0-4320-90d6-ad381eac8f36",
+      "timestamp": "2026-09-13T11:22:22.675Z",
+      "ip": "127.0.0.1",
+      "eventType": "UNAUTHORIZED_ACCESS",
+      "status": "BLOCKED",
+      "details": "Missing session credentials"
+    }
+  ]
+}
